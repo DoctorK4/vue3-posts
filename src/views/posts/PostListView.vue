@@ -11,15 +11,20 @@
           @click="goPage(post.id)"
         />
       </div>
+      <AppCard>
+        <PostDetailView :id="2"></PostDetailView>
+      </AppCard>
     </div>
   </div>
 </template>
 
 <script setup>
-import { getPosts } from '@/api/posts';
-import PostItem from '@/components/posts/PostItem.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import PostItem from '@/components/posts/PostItem.vue';
+import { getPosts } from '@/api/posts';
+import PostDetailView from '@/views/posts/PostDetailView.vue';
+import AppCard from '@/components/AppCard.vue';
 
 const router = useRouter();
 const posts = ref([]);
@@ -35,6 +40,7 @@ const goPage = id => {
 const fetchPosts = () => {
   posts.value = getPosts();
 };
+
 fetchPosts();
 </script>
 
