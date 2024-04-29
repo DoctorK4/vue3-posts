@@ -7,10 +7,10 @@
       "createdAt": "2020-01-01"
     },
     {
-      "id": 2,
-      "titie": "제목2",
+      "title": "ddd",
       "content": "내용2",
-      "createdAt": "2020-02-01"
+      "createdAt": "2020-02-01",
+      "id": 2
     },
     {
       "id": 3,

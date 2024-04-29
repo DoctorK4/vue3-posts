@@ -4,19 +4,19 @@
     <hr class="my-4" />
     <form @submit.prevent>
       <div class="row g-3">
-        <div class="col">
+        <div class="col-9">
           <input type="text" class="form-control" v-model="params.title_like" />
         </div>
       </div>
+      <div class="col-3">
+        <select class="form-select" v-model="params._limit">
+          <option value="3">3개씩 보기</option>
+          <option value="6">6개씩 보기</option>
+          <option value="9">9개씩 보기</option>
+        </select>
+      </div>
     </form>
     <hr class="my-4" />
-    <div class="col-3">
-      <select class="form-select" v-model="params._limit">
-        <option value="3">3개씩 보기</option>
-        <option value="6">6개씩 보기</option>
-        <option value="9">9개씩 보기</option>
-      </select>
-    </div>
     <div class="row g-3">
       <div v-for="post in posts" class="col-4" :key="post.id">
         <PostItem
