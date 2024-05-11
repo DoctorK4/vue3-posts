@@ -12,8 +12,9 @@ export function getPostById(id) {
 export function createPost(post) {
   return posts.post('', post);
 }
+
 export function updatePost(id, post) {
-  return posts.put(`/${id}`, post);
+  return posts.patch(`/${id}`, post);
 }
 export function deletePost(id) {
   return posts.delete(id);
