@@ -1,48 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "titie": "제목1",
-      "content": "내용1",
-      "createdAt": "2020-01-01"
-    },
-    {
-      "title": "ddd",
-      "content": "내용2",
-      "createdAt": "2020-02-01",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "titie": "제목3",
-      "content": "내용3",
-      "createdAt": "2020-03-01"
-    },
-    {
-      "id": 4,
-      "titie": "제목4",
-      "content": "내용4",
-      "createdAt": "2020-04-01"
-    },
-    {
-      "id": 5,
-      "titie": "제목5",
-      "content": "내용5",
-      "createdAt": "2020-05-01"
-    },
-    {
-      "title": "test",
-      "content": "test",
-      "createdAt": "2024-04-23",
-      "id": 6
-    },
-    {
-      "title": "ㅅㄷsㄴㅅ",
-      "content": "ㄴㅅㄷㄴㅁ",
-      "createdAt": "2024-05-01",
-      "id": 7
-    },
-    {
       "title": "111",
       "content": "111",
       "createdAt": 1714571220193,
@@ -71,6 +29,12 @@
       "content": "fsdfdff",
       "createdAt": 1714571235044,
       "id": 12
+    },
+    {
+      "title": "5월 11일",
+      "content": "토요일",
+      "createdAt": 1715425002185,
+      "id": 13
     }
   ]
 }
