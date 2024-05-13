@@ -18,6 +18,7 @@
         <button class="btn btn-primary">수정</button>
       </template>
     </PostForm>
+    <AppAlert :show="showAlert" />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import { getPostById, updatePost } from '@/api/posts';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import PostForm from '@/components/posts/PostForm.vue';
+import AppAlert from '@/components/AppAlert.vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -58,10 +60,11 @@ const edit = async () => {
     await updatePost(id, {
       ...form.value,
     });
-    router.push({
-      name: 'PostDetail',
-      params: { id },
-    });
+    vAlert();
+    // await router.push({
+    //   name: 'PostDetail',
+    //   params: { id },
+    // });
   } catch (error) {
     console.error(error);
   }
@@ -73,6 +76,13 @@ const goDetailPage = () => {
     params: { id },
   });
 };
-</script>
 
-<style lang="scss" scoped></style>
+//alert
+const showAlert = ref(false);
+const vAlert = () => {
+  showAlert.value = true;
+  setTimeout(() => {
+    showAlert.value = false;
+  }, 2000);
+};
+</script>
