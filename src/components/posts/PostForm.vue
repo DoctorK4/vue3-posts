@@ -7,6 +7,7 @@
           @input="$emit('update:title', $event.target.value)"
           type="text"
           class="form-control"
+          :value="title"
           id="exampleFormControlInput1"
         />
       </div>
@@ -18,6 +19,7 @@
           @input="$emit('update:content', $event.target.value)"
           class="form-control"
           id="contents"
+          :value="content"
           rows="3"
         ></textarea>
       </div>

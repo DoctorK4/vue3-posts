@@ -1,16 +1,31 @@
 <template>
-  <div v-if="show" class="alert alert-success app-alert" role="alert">
-    수정이 완료되었습니다!
+  <div v-if="show" class="alert app-alert" :class="styleClass" role="alert">
+    {{ message }}
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   show: {
     type: Boolean,
     default: false,
   },
+  message: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    default: 'error',
+    validator: value => ['success', 'error'].includes(value),
+  },
 });
+
+const styleClass = computed(() =>
+  props.type === 'error' ? 'alert-danger' : 'alert-success',
+);
 </script>
 
 <style scoped>
