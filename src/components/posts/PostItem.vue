@@ -6,6 +6,13 @@
         {{ content }}
       </p>
       <p class="text-muted">{{ createdAt }}</p>
+      <template #footer>
+        <div class="d-flex flex-row-reverse">
+          <button class="btn p-0" @click.stop="$emit('modal')">
+            <i class="bi bi-emoji-smile"></i>
+          </button>
+        </div>
+      </template>
     </AppCard>
   </div>
 </template>
