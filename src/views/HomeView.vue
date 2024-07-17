@@ -12,10 +12,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  created() {
+    // console.log(this.$person.name);
+    // this.$person.say();
+  },
+};
+</script>
+
 <script setup>
 import { useRouter } from 'vue-router';
 import AppCard from '@/components/AppCard.vue';
-import { ref } from 'vue';
+import { inject, ref } from 'vue';
 import AppGrid from '@/components/AppGrid.vue';
 
 const router = useRouter();
@@ -24,6 +33,9 @@ const goAboutPage = () => {
 };
 
 const items = ref(['사과', '딸기', '포도', '바나나']);
+
+const person = inject('person');
+console.log(person.name, 'setup script');
 </script>
 
 <style lang="scss" scoped></style>
